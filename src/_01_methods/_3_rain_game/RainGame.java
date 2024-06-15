@@ -60,12 +60,14 @@ public class RainGame extends PApplet {
 
     @Override
     public void setup() {
-
     }
 
     @Override
     public void draw() {
-
+    	fill(0,0,0);
+    	stroke(0,0,0);
+    	ellipse(x,y,10,60);
+    	background(0,0,0);
     }
 
     static public void main(String[] args) {
