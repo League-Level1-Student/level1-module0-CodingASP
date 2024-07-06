@@ -44,6 +44,7 @@ import processing.core.PImage;
 public class RainGame extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 600;
+    int randomNumber = (int) random(WIDTH);
 
     int score = 0;
     int bucketWidth = 50;
@@ -57,7 +58,13 @@ public class RainGame extends PApplet {
     public void settings() {
         size(WIDTH, HEIGHT);
     }
-
+    void checkCatch(int x){
+        if (x > mouseX && x < mouseX+100)
+           score++;
+        else if (score > 0) 
+           score--;
+       println("Your score is now: " + score);
+   }
     @Override
     public void setup() {
     }
